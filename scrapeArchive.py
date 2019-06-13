@@ -47,6 +47,13 @@ print(match)
 
 print(soup.title.text)
 #
+
+# close things out correctly - don't leave any messes
+# seems we need the last two or the Firefox executable stays running in the background.
+driver.close()
+driver.quit()
+driver.stop_client()
+
 #for paragraph in soup.find_all('p'):
 #    print (paragraph.text)
 
